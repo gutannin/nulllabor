@@ -59,6 +59,18 @@ namespace Model
             }
         }
 
+        public void fileOperation(String action, String argument)
+        {
+            if (action == "save")
+            {
+                new FileOperators.Saver().perform(historyData, argument, presenter);
+            }
+            else if (action == "load")
+            {
+                new FileOperators.Loader().perform(historyData, argument, presenter);
+            }
+        }
+
         public void restoreHistory(int pointer)
         {
             if (pointer >= historyData.list.Count)

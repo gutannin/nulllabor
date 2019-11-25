@@ -44,7 +44,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FileOperators\Loader.cs" />
+    <Compile Include="FileOperators\Saver.cs" />
     <Compile Include="HistoryData.cs" />
+    <Compile Include="IFileOperator.cs" />
     <Compile Include="IModel.cs" />
     <Compile Include="IPerformer.cs" />
     <Compile Include="IPresenter.cs" />

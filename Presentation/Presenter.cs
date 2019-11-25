@@ -36,12 +36,20 @@ namespace Presentation
                 return;
             }
 
+            view.showStatus(0, "Start.");
+
             model.performOperation(action, input);
         }
 
         public void restoreHistory(int pointer)
         {
+            view.showStatus(0, "Start.");
             model.restoreHistory(pointer);
+        }
+
+        public void fileOperation(String action, String argument)
+        {
+            model.fileOperation(action, argument);
         }
 
         public void showHistory(Model.HistoryData data)

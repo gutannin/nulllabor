@@ -9,6 +9,8 @@ namespace Demo
     public interface IPresenter
     {
         void performAction(String action, String argument);
+
+        void fileOperation(String action, String argument);
         void restoreHistory(int pointer);
     }
 }

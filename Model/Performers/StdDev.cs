@@ -26,7 +26,7 @@ namespace Model.Performers
                 m2 += old[i] * old[i];
 
                 if ((i + 1) % 100 == 0 || i + 1 == block.Length)
-                    presenter.showStatus((double)(i + 1) / block.Length, "Performing plus.");
+                    presenter.showStatus((double)(i + 1) / block.Length, "Performing stddev.");
             }
 
             if (block.Length > 0)

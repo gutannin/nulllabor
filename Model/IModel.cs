@@ -9,6 +9,7 @@ namespace Model
     public interface IModel
     {
         void performOperation(String action, double argument);
+        void fileOperation(String action, String argument);
         void restoreHistory(int pointer);
     }
 }

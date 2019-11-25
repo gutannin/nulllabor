@@ -49,7 +49,7 @@ namespace Demo
 
         private void button15_Click(object sender, EventArgs e)
         {
-            presenter.performAction("save", inputBox.Text);
+            presenter.fileOperation("save", inputBox.Text);
         }
 
         private void button13_Click(object sender, EventArgs e)
@@ -59,7 +59,7 @@ namespace Demo
 
         private void button14_Click(object sender, EventArgs e)
         {
-            presenter.performAction("load", inputBox.Text);
+            presenter.fileOperation("load", inputBox.Text);
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
