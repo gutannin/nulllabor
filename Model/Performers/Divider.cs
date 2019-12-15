@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model.Performers
 {
-    class Clone : IPerformer
+    class Divider : IPerformer
     {
         public void perform(HistoryData data, double input, IPresenter presenter)
         {
@@ -16,25 +16,21 @@ namespace Model.Performers
                 return;
             }
 
-            int mult = (int)Math.Floor(input);
-
-            double[] old = data.Current();
-
-            if (mult != input || input < 0 || old.Length * mult > 1e6)
+            if (input == 0)
             {
-                presenter.showStatus(0, "Bad argument");
+                presenter.showStatus(0, "Bad argument.");
                 return;
             }
 
-            double[] block = new double[old.Length * mult];
+            double[] old = data.Current();
+            double[] block = new double[old.Length];
 
-            for (uint i = 0; i < old.Length; ++i)
+            for (uint i = 0; i < block.Length; ++i)
             {
-                for (uint j = 0; j < mult; ++j)
-                    block[j * old.Length + i] = old[i];
+                block[i] = old[i] / input;
 
                 if ((i + 1) % 100 == 0 || i + 1 == block.Length)
-                    presenter.showStatus((double)(i + 1) / block.Length, "Performing clone.");
+                    presenter.showStatus((double)(i + 1) / block.Length, "Performing divide.");
             }
 
             data.Add(block);

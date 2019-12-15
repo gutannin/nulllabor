@@ -6,17 +6,13 @@ using System.Threading.Tasks;
 
 namespace Model.Performers
 {
-    class Repeat : IPerformer
+    class Assigner : IPerformer
     {
         public void perform(HistoryData data, double input, IPresenter presenter)
         {
-            if (data.list.Count == 0 || data.pointer + 1 == data.list.Count)
-            {
-                presenter.showStatus(0, "Bad state.");
-                return;
-            }
+            double[] block = new double[1] { input };
 
-            data.pointer++;
+            data.Add(block);
             presenter.showStatus(1, "Done.");
         }
     }

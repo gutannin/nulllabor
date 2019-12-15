@@ -20,7 +20,7 @@ namespace Model.Performers
             double[] block = new double[1] { 0 };
             double m2 = 0;
 
-            for (uint i = 0; i < block.Length; ++i)
+            for (uint i = 0; i < old.Length; ++i)
             {
                 block[0] += old[i];
                 m2 += old[i] * old[i];

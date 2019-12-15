@@ -52,23 +52,23 @@
     <Compile Include="IPerformer.cs" />
     <Compile Include="IPresenter.cs" />
     <Compile Include="Model.cs" />
-    <Compile Include="Performers\Assign.cs" />
-    <Compile Include="Performers\Clone.cs" />
-    <Compile Include="Performers\Divide.cs" />
+    <Compile Include="Performers\Assigner.cs" />
+    <Compile Include="Performers\Cloner.cs" />
+    <Compile Include="Performers\Divider.cs" />
     <Compile Include="Performers\Factorial.cs" />
     <Compile Include="Performers\Log.cs" />
     <Compile Include="Performers\Mean.cs" />
     <Compile Include="Performers\Minus.cs" />
-    <Compile Include="Performers\Multiply.cs" />
+    <Compile Include="Performers\Multiplier.cs" />
     <Compile Include="Performers\Plus.cs" />
     <Compile Include="Performers\Power.cs" />
-    <Compile Include="Performers\Repeat.cs" />
+    <Compile Include="Performers\Repeater.cs" />
     <Compile Include="Performers\Reset.cs" />
     <Compile Include="Performers\Root.cs" />
     <Compile Include="Performers\Sqrt.cs" />
     <Compile Include="Performers\Square.cs" />
     <Compile Include="Performers\StdDev.cs" />
-    <Compile Include="Performers\Undo.cs" />
+    <Compile Include="Performers\Undoer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model.Performers
 {
-    class Undo : IPerformer
+    class Undoer : IPerformer
     {
         public void perform(HistoryData data, double input, IPresenter presenter)
         {

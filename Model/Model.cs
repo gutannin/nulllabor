@@ -22,8 +22,8 @@ namespace Model
 
             this.operations.Add("plus", new Performers.Plus());
             this.operations.Add("minus", new Performers.Minus());
-            this.operations.Add("multiply", new Performers.Multiply());
-            this.operations.Add("divide", new Performers.Divide());
+            this.operations.Add("multiply", new Performers.Multiplier());
+            this.operations.Add("divide", new Performers.Divider());
 
             this.operations.Add("square", new Performers.Square());
             this.operations.Add("sqrt", new Performers.Sqrt());
@@ -35,15 +35,15 @@ namespace Model
             this.operations.Add("mean", new Performers.Mean());
             this.operations.Add("stddev", new Performers.StdDev());
 
-            this.operations.Add("clone", new Performers.Clone());
+            this.operations.Add("clone", new Performers.Cloner());
             //this.operations.Add("factorial", new Performers.Factorial());
             //this.operations.Add("mean", new Performers.Mean());
             //this.operations.Add("stddev", new Performers.StdDev());
 
-            this.operations.Add("assign", new Performers.Assign());
+            this.operations.Add("assign", new Performers.Assigner());
             this.operations.Add("reset", new Performers.Reset());
-            this.operations.Add("undo", new Performers.Undo());
-            this.operations.Add("repeat", new Performers.Repeat());
+            this.operations.Add("undo", new Performers.Undoer());
+            this.operations.Add("repeat", new Performers.Repeater());
         }
 
         public void performOperation(String action, double argument)

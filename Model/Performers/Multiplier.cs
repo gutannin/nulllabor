@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model.Performers
 {
-    class Multiply : IPerformer
+    class Multiplier : IPerformer
     {
         public void perform(HistoryData data, double input, IPresenter presenter)
         {
